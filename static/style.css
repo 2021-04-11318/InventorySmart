@@ -1,0 +1,586 @@
+/* Reset some basic defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for header, main, and footer */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Header and Footer styling */
+  header, footer {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    flex: 0 0 auto;
+  }
+  
+  /* Main content area takes remaining space */
+  main {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden; /* Prevent main overflow */
+  }
+  
+  /* Two columns styling */
+  .column {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto; /* Enable independent vertical scrolling */
+    border: 1px solid #ccc;
+  }
+  
+  /* Optional: space between columns */
+  .column + .column {
+    margin-left: 1rem;
+  }
+  
+  /* Navigation bar styling (inside header) */
+  
+  /* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Left section: logo and site name */
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .site-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+    
+    .nav-right {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+    
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Menu button styling */
+    .menu-btn {
+      background: none;
+      border: 1px solid #007BFF;
+      color: #007BFF;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+     
+      transition: background-color 0.3s, color 0.3s;
+      
+    }
+    
+    .menu-btn:hover {
+      background-color: #007BFF;
+      color: #fff;
+    }
+    
+    /* Dropdown content is hidden by default */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%; /* Positions dropdown inside the button */
+      right: 0;
+      background-color: #ffffff;
+      min-width: 160px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: #007BFF;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #f4f4f4;
+    }
+    
+    /* Show dropdown when the menu button is clicked */
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+  /* Authentication container styling */
+.auth-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-container .form-group {
+  margin-bottom: 15px;
+}
+
+.auth-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.auth-container .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Authentication button styling */
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.auth-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Signup toggle buttons */
+.signup-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.signup-toggle .toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #007BFF;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.signup-toggle .toggle-btn.active {
+  background-color: #007BFF;
+  color: #fff;
+}
+  /* Column styling */
+.column {
+  flex: 1;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+/* Filters form styling */
+.filters-column {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group p {
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.form-group label input[type="checkbox"] {
+  margin-right: 5px;
+}
+.feature {
+  display: flex;
+  align-items: center;
+}
+.features {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.recommendation-btn {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.recommendation-btn:hover {
+  background-color: #0056b3;
+}
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Wrapper for sidebar + main content */
+.vendor-wrapper {
+  display: flex;
+  min-height: 100vh; /* Full-height layout */
+}
+
+/* SIDEBAR */
+.vendor-sidebar {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.vendor-sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.vendor-sidebar ul {
+  list-style: none;
+}
+
+.vendor-sidebar li {
+  margin-bottom: 15px;
+}
+
+.vendor-sidebar a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.vendor-sidebar a:hover {
+  color: #007BFF;
+}
+
+.active-link {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* MAIN CONTENT */
+.vendor-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header with page title + action buttons */
+.vendor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+}
+
+.vendor-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.vendor-header-btns button {
+  margin-left: 10px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vendor-header-btns button:hover {
+  background: #0056b3;
+}
+
+/* Tabs */
+.vendor-tabs {
+  display: flex;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding: 0 20px;
+}
+
+.vendor-tabs .tab {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #333;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.vendor-tabs .tab:hover {
+  color: #007BFF;
+}
+
+.vendor-tabs .tab.active {
+  border-bottom: 3px solid #007BFF;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Content area */
+.vendor-content {
+  padding: 20px;
+}
+
+.welcome-section h2 {
+  margin-bottom: 10px;
+}
+
+.welcome-section ul {
+  list-style: disc inside;
+  margin-bottom: 20px;
+}
+
+/* No active listings placeholder */
+.no-active-listings {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 4px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.no-active-listings h3 {
+  margin-bottom: 10px;
+}
+
+.no-active-listings button {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.no-active-listings button:hover {
+  background: #0056b3;
+}
+
+/* ===== MODAL STYLES ===== */
+.modal-bg {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ height: 100%;
+  background-color: rgba(0,0,0,0.5); /* Semi-transparent overlay */
+  z-index: 999; /* Ensure modal is on top */
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #fff;
+  width: 500px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Close ("X") button in top-right corner */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Form styling in modal */
+#createListingForm .form-group {
+  margin-bottom: 15px;
+}
+
+#createListingForm .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#createListingForm .form-group input[type="text"],
+#createListingForm .form-group input[type="number"],
+#createListingForm .form-group select,
+#createListingForm .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#createListingForm .form-group p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#createListingForm .form-group label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Submit button in modal */
+.submit-listing-btn {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-listing-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Show modal when .show class is added */
+.modal-bg.show {
+  display: flex; /* Switch from 'none' to 'flex' to center content */
+}
+/* Right Column Recommendations */
+#recommendation-list {
+  margin-top: 20px;
+}
+
+.recommended-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.recommended-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.software-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.software-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.software-name:hover {
+  text-decoration: underline;
+}
+
+.software-rating {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 2px;
+}
+
+.software-description {
+  margin: 8px 0;
+  color: #666;
+}
+
+.software-features {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 8px;
+}

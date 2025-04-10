@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vendor Portal - Listings & Applications</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="vendor-wrapper">
+    <!-- Optional Sidebar -->
+    <aside class="vendor-sidebar">
+      <h2>Vendor Portal</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#" class="active-link">Listings &amp; Applications</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="#">Reports</a></li>
+        <!-- Add more sidebar links as needed -->
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="vendor-main">
+      <!-- Top Header Section -->
+      <header class="vendor-header">
+        <h1>Listings &amp; Applications</h1>
+        <div class="vendor-header-btns">
+          <button class="create-listing-btn">Create Listing</button>
+          <button class="remove-listing-btn">Remove Listing</button>
+        </div>
+      </header>
+
+      <!-- Tab Navigation -->
+      <nav class="vendor-tabs">
+        <button class="tab active">Active</button>
+        <button class="tab">Draft</button>
+        <button class="tab">Inactive</button>
+        <!-- Add more tabs if needed -->
+      </nav>
+
+      <!-- Main Content -->
+      <section class="vendor-content">
+        <div class="welcome-section">
+          <h2>Welcome to Listings &amp; Applications</h2>
+          <ul>
+            <li>Find and sign the best customers for your software .</li>
+            <li>Manage listings and applications all in one place.</li>
+          </ul>
+        </div>
+
+        <!-- Placeholder: No Active Listings -->
+        <div class="no-active-listings">
+          <h3>No active listings</h3>
+          <p>
+            Click below to create a listing and be one step closer to reaching new users.
+          </p>
+          <button class="create-listing-btn">Create Listing</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ========== MODAL FORM FOR CREATING LISTING ========== -->
+  <div id="createListingModal" class="modal-bg">
+    <div class="modal-content">
+      <!-- "X" button to close the modal -->
+      <span class="close-modal">&times;</span>
+      <h2>Create a New Listing</h2>
+
+      <form id="createListingForm">
+        <!-- 1. Logo Upload -->
+        <div class="form-group">
+          <label for="softwareLogo">Software Logo</label>
+          <input type="file" id="softwareLogo" accept="image/*">
+        </div>
+
+        <!-- 2. Name of Software -->
+        <div class="form-group">
+          <label for="softwareName">Software Name</label>
+          <input type="text" id="softwareName" placeholder="e.g., MyInventoryPro" required>
+        </div>
+
+        <!-- 3. Pricing Mode -->
+        <div class="form-group">
+          <label for="pricingMode">Pricing Mode</label>
+          <select id="pricingMode">
+            <option value="one-time">One-time</option>
+            <option value="monthly">Monthly</option>
+            <option value="annual">Annual</option>
+          </select>
+        </div>
+
+        <!-- 4. Price -->
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" id="price" placeholder="0.00" step="0.01" min="0">
+        </div>
+
+        <!-- 5. Features (Checkboxes) -->
+        <div class="form-group">
+          <p>Features</p>
+          <label>
+            <input type="checkbox" name="features" value="Real-time Inventory Tracking">
+            Real-time Inventory Tracking
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="automated-reordering">
+            Automated Reordering
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Reporting and Analytics">
+            Reporting and Analytics
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Multichannel Integration">
+            Multichannel Integration
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Barcode and RFID Scanning">
+            Barcode and RFID Scanning
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Warehouse Management Features">
+            Warehouse Management Features
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Customization and Scalability">
+            Customization and Scalability
+          </label>
+          <label>
+            <input type="checkbox" name="features" value="Access control and security">
+            Access control and security
+          </label>
+          <!-- Add more features as needed -->
+        </div>
+
+        <!-- 6. Additional Info (Text Area) -->
+        <div class="form-group">
+          <label for="softwareDescription">Additional Info</label>
+          <textarea id="softwareDescription" rows="4" placeholder="Provide more details..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-listing-btn">Submit Listing</button>
+      </form>
+    </div>
+  </div>
+  <!-- ========== END MODAL ========== -->
+
+  <script src="script.js"></script>
+</body>
+</html>

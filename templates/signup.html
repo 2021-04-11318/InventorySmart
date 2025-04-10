@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up - InventorySmart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <img src="assets/dss icon.png" alt="Logo" class="logo">
+          <span class="site-name">InventorySmart</span>
+        </div>
+        <div class="nav-right">
+          <div class="dropdown">
+            <button class="menu-btn">☰ Menu</button>
+            <div class="dropdown-content">
+              <a href="signup.html">Sign Up</a>
+              <a href="login.html">Login</a>
+              <a href="write-review.html">Write Review</a>
+              <a href="vendors.html">For Vendors</a>
+              <a href="about.html">About Us</a>
+              <a href="faqs.html">FAQs</a>
+            </div>
+          </div>
+        </div>
+</nav>
+</header>
+    <main>
+      <div class="auth-container">
+        <h2>Sign Up</h2>
+        <div class="signup-toggle">
+          <button id="userSignupBtn" class="toggle-btn active">Normal User</button>
+          <button id="vendorSignupBtn" class="toggle-btn">Software Vendor</button>
+        </div>
+        
+        <!-- Normal User Signup Form -->
+        <form id="userSignupForm">
+          <div class="form-group">
+            <label for="userName">Name</label>
+            <input type="text" id="userName" name="userName" required>
+          </div>
+          <div class="form-group">
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" name="userEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="userPassword">Password</label>
+            <input type="password" id="userPassword" name="userPassword" required>
+          </div>
+          <button type="submit" class="auth-btn">Sign Up</button>
+        </form>
+        
+        <!-- Software Vendor Signup Form -->
+        <form id="vendorSignupForm" style="display: none;">
+          <div class="form-group">
+            <label for="vendorCompany">Company Name</label>
+            <input type="text" id="vendorCompany" name="vendorCompany" required>
+          </div>
+          <div class="form-group">
+            <label for="vendorContact">Contact Person</label>
+            <input type="text" id="vendorContact" name="vendorContact" required>
+          </div>
+          <div class="form-group">
+            <label for="vendorEmail">Email</label>
+            <input type="email" id="vendorEmail" name="vendorEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="vendorPassword">Password</label>
+            <input type="password" id="vendorPassword" name="vendorPassword" required>
+          </div>
+          <button type="submit" class="auth-btn">Sign Up</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // Toggle between Normal User and Software Vendor signup forms
+    document.getElementById("userSignupBtn").addEventListener("click", function() {
+      document.getElementById("userSignupForm").style.display = "block";
+      document.getElementById("vendorSignupForm").style.display = "none";
+      this.classList.add("active");
+      document.getElementById("vendorSignupBtn").classList.remove("active");
+    });
+    
+    document.getElementById("vendorSignupBtn").addEventListener("click", function() {
+      document.getElementById("vendorSignupForm").style.display = "block";
+      document.getElementById("userSignupForm").style.display = "none";
+      this.classList.add("active");
+      document.getElementById("userSignupBtn").classList.remove("active");
+    });
+  </script>
+</body>
+</html>

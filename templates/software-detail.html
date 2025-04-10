@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="software-detail-container">
+        <!-- Software Info Section -->
+        <div id="softwareInfo" class="software-info">
+            <img id="softwareLogo" class="software-logo" src="" alt="Software Logo">
+            <h1 id="softwareName"></h1>
+            <div class="rating-summary">
+                <span id="averageRating">0.0</span>
+                <div class="stars-display" id="starsDisplay"></div>
+                <span id="totalRatings">(0 ratings)</span>
+            </div>
+            <p id="softwareDescription"></p>
+        </div>
+
+        <!-- Rating Form -->
+        <div class="rating-section">
+            <h2>Rate this Software</h2>
+            <form id="ratingForm" class="rating-form">
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1"><i class="fas fa-star"></i></label>
+                </div>
+                <button type="submit" class="submit-rating">Submit Rating</button>
+            </form>
+        </div>
+
+        <!-- Review Form -->
+        <div class="review-section">
+            <h2>Write a Review</h2>
+            <form id="reviewForm" class="review-form">
+                <textarea 
+                    id="reviewContent" 
+                    name="content" 
+                    rows="5" 
+                    placeholder="Share your experience with this software..."
+                    required></textarea>
+                <button type="submit" class="submit-review">Submit Review</button>
+            </form>
+        </div>
+
+        <!-- Reviews Display -->
+        <div class="reviews-section">
+            <h2>User Reviews</h2>
+            <div id="reviewsList" class="reviews-list">
+                <!-- Reviews will be inserted here dynamically -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

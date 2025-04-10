@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InventorySmart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <img src="assets/dss icon.png" alt="Logo" class="logo">
+          <span class="site-name">InventorySmart</span>
+        </div>
+        <div class="nav-right">
+          <div class="dropdown">
+            <button class="menu-btn">☰ Menu</button>
+            <div class="dropdown-content">
+              <a href="signup.html">Sign Up</a>
+              <a href="login.html">Login</a>
+              <a href="write-review.html">Write Review</a>
+              <a href="vendors.html">For Vendors</a>
+              <a href="about.html">About Us</a>
+              <a href="faqs.html">FAQs</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Left Column: Filters -->
+      <div class="column filters-column">
+        <form id="filterForm">
+          <!-- 1. Type of Industry -->
+          <div class="form-group">
+            <label for="industry">Type of Industry</label>
+            <select id="industry" name="industry">
+              <option value="">Select industry</option>
+              <option value="retail">Retail</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="wholesale">Wholesale</option>
+              <option value="ecommerce">E-commerce</option>
+            </select>
+          </div>
+
+          <!-- 2. Inventory Size -->
+          <div class="form-group">
+            <label for="inventorySize">Inventory Size</label>
+            <select id="inventorySize" name="inventorySize">
+              <option value="">Select inventory size</option>
+              <option value="less-than-100">Less than 100</option>
+              <option value="100-1000">100-1000</option>
+              <option value="1000-10000">1000-10000</option>
+              <option value="more-than-10000">More than 10000</option>
+            </select>
+          </div>
+
+          <!-- 3. Deployment Method -->
+          <div class="form-group">
+            <label for="deploymentMethod">Deployment Method</label>
+            <select id="deploymentMethod" name="deploymentMethod">
+              <option value="">Select deployment method</option>
+              <option value="cloud">Cloud</option>
+              <option value="on-premise">On Premise</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+
+          <!-- 4. Deployment Platform -->
+          <div class="form-group">
+            <label for="deploymentPlatform">Deployment Platform</label>
+            <select id="deploymentPlatform" name="deploymentPlatform">
+              <option value="">Select deployment platform</option>
+              <option value="desktop">Desktop</option>
+              <option value="mobile">Mobile Phone</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+
+          <!-- 5. Pricing Method -->
+          <div class="form-group">
+            <label for="pricingMethod">Pricing Method</label>
+            <select id="pricingMethod" name="pricingMethod">
+              <option value="">Select pricing method</option>
+              <option value="one-time">One Time</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+
+          <!-- 6. One Time Budget (shown only if one time is selected) -->
+          <div class="form-group" id="oneTimeBudgetGroup" style="display: none;">
+            <label for="oneTimeBudget">One Time Budget</label>
+            <select id="oneTimeBudget" name="oneTimeBudget">
+              <option value="">Select one time budget</option>
+              <option value="less-than-1000">Less than 1000 USD</option>
+              <option value="1000-2000">1000-2000 USD</option>
+            </select>
+          </div>
+
+          <!-- 7. Monthly Budget (shown only if monthly is selected) -->
+          <div class="form-group" id="monthlyBudgetGroup" style="display: none;">
+            <label for="monthlyBudget">Monthly Budget</label>
+            <select id="monthlyBudget" name="monthlyBudget">
+              <option value="">Select monthly budget</option>
+              <option value="less-than-50">Less than $50</option>
+              <option value="50-200">$50-200</option>
+              <option value="200-500">$200-500</option>
+            </select>
+          </div>
+
+          <!-- Features Checkboxes -->
+          <div class="form-group">
+            <div class="feature">
+              <img src="assets/features icon.png" alt="features" class="features">
+              <p>Inventory Software Features</p>
+            </div>
+            <label>
+              <input type="checkbox" name="features" value="Real-time Inventory Tracking">
+              Real-time Inventory Tracking
+            </label>
+            <label>
+              <input type="checkbox" name="features" value="automated-reordering">
+              Automated Reordering
+            </label>
+            <label>
+              <input type="checkbox" name="features" value="Reporting and Analytics">
+              Reporting and Analytics
+            </label>
+            <label>
+              <input type="checkbox" name="features" value="Multichannel Integration">
+              Multichannel Integration
+            </label>
+            <label>
+              <input type="checkbox" name="features" value="Barcode and RFID Scanning">
+              Barcode and RFID Scanning
+            </label>
+            <label>
+              <input type="checkbox" name="features" value="Warehouse Management Features">
+              Warehouse Management Features
+            </label>
+            <label>
+              <input type="checkbox" name="features" value="Customization and Scalability">
+              Customization and Scalability
+            </label>
+            <label>
+              <input type="checkbox" name="features" value="Access control and security">
+              Access control and security
+            </label>
+          </div>
+
+          <!-- Request Recommendation Button -->
+          <button type="submit" class="recommendation-btn">Request Recommendation</button>
+        </form>
+      </div>
+
+      <!-- Right Column: Recommendation Results -->
+      <div class="column">
+        <h2>Recommended Inventory Systems</h2>
+        <div id="recommendation-list">
+          <!-- Dynamically populated with JavaScript -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
